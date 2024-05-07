@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Aplikasi Enkripsi AES</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Aplikasi Enkripsi/Dekripsi</h1>
+            <h2>Algoritma Advanced Encryption Standard (AES)</h2>
+        </div>
+        <div id="input-container" class="content">
+            <label for="plaintext">Pesan :</label>
+            <textarea id="plaintext" placeholder="Masukkan plaintext yang ingin dienkripsi" rows="5"></textarea>
+            <label for="key">Kunci :</label>
+            <input type="text" id="key" placeholder="Masukkan kunci enkripsi/dekripsi" maxlength="16">
+            <div class="button-container">
+                <button class="reset" onclick="resetInput()">
+                    <i class="material-icons">refresh</i> Reset
+                </button>
+                <button class="encrypt" onclick="encryptText()">
+                    <i class="material-icons">lock</i> Enkripsi
+                </button>
+                <button class="decrypt" onclick="decryptText()">
+                    <i class="material-icons">lock_open</i> Dekripsi
+                </button>
+            </div>
+        </div>
+        <div id="output-container" class="content">
+            <label for="ciphertext">Output :</label>
+            <textarea id="ciphertext" placeholder="Ciphertext/Plaintext akan ditampilkan di sini" rows="5" readonly></textarea>
+            <button class="back" onclick="backToInput()">
+                <i class="material-icons">arrow_back</i> Kembali
+            </button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/aes-js@3.1.2/index.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
